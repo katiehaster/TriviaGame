@@ -1,0 +1,25 @@
+body {
+    background-image: url(../images/gtBackground.jpg);
+}
+
+.first-page-box{
+    background-color: #f8f8f6;
+    opacity: .80;
+    border: solid lightgray 1px;
+    padding: 75px;
+    text-align: center;
+    margin-top: 150px;
+    
+}
+
+h1 {
+    font-size: 89px;
+    font-family: 'Amatic SC', cursive;
+
+}
+
+.btn {
+    font-size: 48px;
+    font-family: 'Amatic SC', cursive;
+}
+

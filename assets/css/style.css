@@ -5,21 +5,28 @@ body {
 .first-page-box{
     background-color: #f8f8f6;
     opacity: .80;
-    border: solid lightgray 1px;
+    border: solid lightgray 1.5px;
     padding: 75px;
     text-align: center;
-    margin-top: 150px;
-    
+    margin-top: 150px;   
 }
 
 h1 {
-    font-size: 89px;
+    font-size: 93px;
     font-family: 'Amatic SC', cursive;
-
 }
 
 .btn {
-    font-size: 48px;
+    font-size: 40px;
     font-family: 'Amatic SC', cursive;
+}
+
+.second-page-box{
+    background-color: #f8f8f6;
+    opacity: .80;
+    border: solid lightgray 1.5px;
+    padding: 75px;
+    text-align: center;
+    margin-top: 50px;
 }
 

@@ -1,13 +1,26 @@
-var delayButtonAlert;
-var timer;
+var time = 47000;
 
-$("#start").on("click", start);
+// $("#start").on("click", start);
+
+// window.onload = function() {
+  
+//   time--;
+// };
+start();
 
 function start() {
-    delayButtonAlert = setTimeout(function() {
-        console.log("Start button go")
-      }, 2000);
-};
+  console.log("start function");
+  time--;
+  $("#timer").html(time);
+
+  if (time === 0) {
+    alert("DONE");
+  }
+  }
+
+
+
+
 
 
 

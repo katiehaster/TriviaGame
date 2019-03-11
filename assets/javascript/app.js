@@ -1,9 +1,12 @@
 
 var countdown;
 var intervalId;
-var time = 25;
+var time = 60;
 var guesses = [];
-var correctAnswers=0;
+var correctAnswers = 0;
+var incorrectAnswers = 0;
+var noAnswer = 0;
+var  clickedButton = 0;
 
 
 
@@ -23,39 +26,60 @@ function myTimer() {
   time--;
   if (time === -1) {
     clearInterval(countdown);
+    
+    if(clickedButton === 0) {
     reset ();
-  };
+    }
+     
+  }
 }
 
 function reset() {
   time = 0;
   $("#timer").html(time);
+  alert("Your glass is empty and the bar is closing. Better luck next time!")
   $(".2ndpage").hide();
   $(".3rdpage").show();
-  let guesses = $(".question");
-  console.log(guesses);
+  answers ();
+  
 }
 
 $("#all-done-button").click(function(){
-   let guesses = $(".question");
+  clickedButton = 1;
    $(".2ndpage").hide();
    $(".3rdpage").show();
-  console.log(guesses);
-  rightAnswers ();
-  $("#correct-answers").text("Right answers: " + correctAnswers);
-  // console.log(guesses.attr('data-answer'));
-  
+   answers ();
+
 });
 
 // Right and Wrong Answer Tally and Display
-  function rightAnswers() {
-    console.log($(".questions").data("answers") === true);
-    // console.log($(guesses[0]).data("answer"));
-    // for (let i = 0; i < guesses.length; i++) {
-    //   console.log($(guesses[i]).attr('data-answer'));
-    //   if (($(guesses[i]).attr('data-answer')) === true) {
-    //     correctAnswers++;
-    //     console.log(correctAnswers);
+  function answers() {
+    let guesses = $(".question");
+    console.log(guesses.length+" guesses.length");
+    for (let j = 0; j<guesses.length; j++){
+      console.log($(guesses[j]).find("input").filter(":checked").data("answer"));
+    }
+    for (let i = 0; i < guesses.length; i++) {
+      
+      if (($(guesses[i]).find("input").filter(":checked").data("answer"))===true) {
+        correctAnswers++;
+      }
+         else if (($(guesses[i]).find("input").filter(":checked").data("answer"))===false) {
+          incorrectAnswers++;
+        }
+        else {
+          noAnswer++;
+        }
+      
+    }
+    
+    $("#right-answers").html(correctAnswers);
+    $("#incorrect").html(incorrectAnswers);
+    $("#no-answer").html(noAnswer);
+
+    
+    
+    
       
 
       
@@ -71,33 +95,6 @@ $("#all-done-button").click(function(){
 
 
 
-
-
-
-
-
-
-// sets checked guesses to reveal as checked
-// let guesses = $(":checked");
-// console.log(guesses);
-
-// for (let i = 0; i < guesses.length; i++) {
-//   if($(guesses[i]).atrr("data-answer") === true){
-
-//   }
-  
-// }
-
-
-
-
-
-
-// Search DOM for all "correct" id's that have been checked. Add them together to tally correct answer
-
-// For incorrect answers, tally by subtracting the correct answers from the total number of questions
-
-// For no answer, do for loop for each question to see if there was no answer given. 
 
 
 

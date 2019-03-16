@@ -1,7 +1,7 @@
 
 var countdown;
 var intervalId;
-var time = 60;
+var time = 150;
 var guesses = [];
 var correctAnswers = 0;
 var incorrectAnswers = 0;
@@ -73,9 +73,9 @@ $("#all-done-button").click(function(){
       
     }
     
-    $("#right-answers").html(correctAnswers);
-    $("#incorrect").html(incorrectAnswers);
-    $("#no-answer").html(noAnswer);
+    $("#right-answers").html("Correct answers: " + correctAnswers);
+    $("#incorrect").html("Incorrect answers: " + incorrectAnswers);
+    $("#no-answer").html("No answer: " + noAnswer);
 
     
     

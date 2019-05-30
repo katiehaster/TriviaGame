@@ -8,21 +8,20 @@ To begin the game, click the "Cheers!" button. You'll be timed, so do your best 
 
 ## Deployed Git Pages Link
 
-https://katiehaster.github.io/Trivia-Game/
+https://katiehaster.github.io/TriviaGame/
 
 ## GitHub Link
 
-https://github.com/katiehaster/Trivia-Game
+https://github.com/katiehaster/TriviaGame
 
 ## Technologies Used
 
 * HTML
 * CSS
-* Bootstrap
 * JavaScript
-* React
-* Visual Studio Code
-* Google Fonts
+* jQuery
+* Bootstrap
+* GoogleFonts
 
 ## Author
 Katie Haster
